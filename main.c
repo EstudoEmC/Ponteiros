@@ -8,10 +8,14 @@ int main()
 
     ptr = &var;
 
-    printf("%d\n", var);
-    printf("%p\n", ptr); //endereço
-    printf("%d\n", *ptr);
+    char inteiro[] = "%d\n"; //array de caracteres para formar a string
+    char endereco[] = "%p\n";
+    //char flutuante[] = "%f\n";
 
-    while(1);
+    printf(inteiro, var);
+    printf(endereco, ptr); //endereço
+    printf(inteiro, *ptr);
+
+    //while(1);
     return 0;
 }
