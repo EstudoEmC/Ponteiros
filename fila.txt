@@ -1,0 +1,22 @@
+f->tamanho = 0;
+    f->cab = NULL;
+    f->rab = NULL;
+
+Elemento *e = ( Elemento* )malloc( sizeof( Elemento ) );
+e->ant = NULL;
+e->ElementoInserido = ElementoInserido;
+
+if( ehVazia( f ) ){
+    //caso A - A fila estah vazia
+    f->cab = e;
+    f->rab = e;
+    //alteração
+    e->ant = e; //ultimo elemento apontado para ele mesmo 
+} else {
+    //caso B - A fila nao estah vazia
+    //alteração
+    e->ant = f->cab; //elemento aponta para cabeça
+    f->rab->ant = e; //rabo que aponta para elemento
+    f->rab = e; //rabo recebe elemento
+}
+f->tamanho++;
