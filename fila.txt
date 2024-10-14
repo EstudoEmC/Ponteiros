@@ -1,6 +1,6 @@
-f->tamanho = 0;
-    f->cab = NULL;
-    f->rab = NULL;
+Tamanho = 0;
+f->cab = NULL;
+f->rab = NULL;
 
 Elemento *e = ( Elemento* )malloc( sizeof( Elemento ) );
 e->ant = NULL;
@@ -19,4 +19,4 @@ if( ehVazia( f ) ){
     f->rab->ant = e; //rabo que aponta para elemento
     f->rab = e; //rabo recebe elemento
 }
-f->tamanho++;
+Tamanho++;
